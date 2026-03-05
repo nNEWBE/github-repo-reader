@@ -1,0 +1,88 @@
+{
+  "info": {
+    "_postman_id": "4b6e5892-d98c-489e-a8f8-b3d5b248a318",
+    "name": "GitHub Repo Reader API",
+    "description": "Postman collection for testing the Spring Boot GitHub Repo Reader API endpoints.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Read Contributions",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/v1/read_contributions",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "read_contributions"
+          ]
+        },
+        "description": "Returns the contributors of the tracked GitHub repositories."
+      },
+      "response": []
+    },
+    {
+      "name": "Read Indices",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/v1/read_indices",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "read_indices"
+          ]
+        },
+        "description": "Returns the topics and their sub-topics from the main repository."
+      },
+      "response": []
+    },
+    {
+      "name": "Read Blog",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/v1/read_blog?topic_name=Data type&sub_topic_name=Data type",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "read_blog"
+          ],
+          "query": [
+            {
+              "key": "topic_name",
+              "value": "Data type",
+              "description": "Name of the topic"
+            },
+            {
+              "key": "sub_topic_name",
+              "value": "Data type",
+              "description": "Name of the sub-topic"
+            }
+          ]
+        },
+        "description": "Returns the Markdown content (README) for a specific topic and sub-topic."
+      },
+      "response": []
+    }
+  ]
+}
